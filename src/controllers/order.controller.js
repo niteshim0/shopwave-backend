@@ -42,10 +42,8 @@ const newOrder = asyncHandler(async (req, res,next) => {
     orderItems
   });
 
-  // Perform operations after order creation
-  // TODO
-  // IT will be shifted to while making payment
-  // await reduceStock(orderItems);
+
+  await reduceStock(orderItems);
 
   invalidateCache({
     product: true,
