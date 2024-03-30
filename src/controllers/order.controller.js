@@ -22,9 +22,10 @@ const newOrder = asyncHandler(async (req, res,next) => {
 
   const fields = [shippingInfo, user, subTotal, tax, shippingCharges, discount, total, status, orderItems];
 
+
   for (let i = 0; i < fields.length; i++) {
     const field = fields[i];
-    if (!field) {
+    if (field!==0 && !field) {
       throw new ApiError(400, `All fields - ${field} are required`);
     }
   }

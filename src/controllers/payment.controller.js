@@ -19,6 +19,17 @@ const createStripePaymentIntent = asyncHandler(async (req, res, next) => {
   const paymentIntent = await stripe.paymentIntents.create({
     amount: Number(amount) * 100, 
     currency: "inr",
+    description : "for project test amount",
+    shipping: {
+      name: "test singh",
+      address: {
+        line1: "test Townsend St",
+        postal_code: "98140",
+        city: "test",
+        state: "CA",
+        country: "US",
+      },
+    },
   });
 
   return res.status(200).json(
