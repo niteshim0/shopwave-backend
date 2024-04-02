@@ -37,4 +37,4 @@ This project is a full-stack e-commerce application built to provide users with 
   - Cloudinary
   - Multer
 
-[Frontend Part]()
+[Frontend Part](https://github.com/niteshim0/shopwave-frontend)
